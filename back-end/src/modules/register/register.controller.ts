@@ -7,13 +7,15 @@ export { registerRouter };
 
 registerRouter.post('/register', async (req, res) => {
     try {
+        
         console.log("Request received:", req.body);
+        console.log(req.user);
         const userName = req.body.username;
         const password = req.body.password;
 
-        const userAlredyExcist = await registerService.checkUserName(userName);
+        const userAlreadyExcist = await registerService.checkUserName(userName);
 
-        if(userAlredyExcist) {
+        if(userAlreadyExcist) {
             const response = { message: "This username already exists." };
             res.status(400).json(response);
         }else {
