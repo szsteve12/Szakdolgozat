@@ -1,4 +1,4 @@
-import { getClient } from "../../app";
+import { getClient } from "../../app.js";
 
 export async function checkUserName(userName:string): Promise<boolean> {
     const client = getClient();
@@ -17,7 +17,8 @@ export async function register(userName: string, password: string) {
 
     const newUser = {
         userName: userName,
-        password: password
+        password: password,
+        chip: 1000
     }
 
     const db = client.db('szakdoga');
