@@ -1,12 +1,10 @@
 import { getClient } from "../../app.js";
 
-const deck = createDeck();
-
 export function createDeck() {
     const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];
     const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
     
-    let deck = [];
+    let deck: any = [];
     
     for (let i = 0; i < suits.length; i++) {
         for (let x = 0; x < values.length; x++) {
@@ -29,7 +27,7 @@ export function createDeck() {
 export function createGameSession() {
     const client = getClient();
     const db = client.db('szakdoga');
-    const users = db.collection('session');
+    const sessions = db.collection('session');
 
     const  gameSession = {
         userIDs:{
@@ -38,11 +36,23 @@ export function createGameSession() {
         rounds: 0,
         playerTrack: '',
         started: false,
-
     }
+
 }
 
 export function deal(deck: any) {
+    
+}
+
+export function call() {
+
+}
+
+export function raise() {
+
+}
+
+export function fold() {
     
 }
 

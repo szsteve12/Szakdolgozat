@@ -18,7 +18,10 @@ export async function register(userName: string, password: string) {
     const newUser = {
         userName: userName,
         password: password,
-        chip: 1000
+        chip: 1000,
+        currentHand: {
+            
+        }
     }
 
     const db = client.db('szakdoga');

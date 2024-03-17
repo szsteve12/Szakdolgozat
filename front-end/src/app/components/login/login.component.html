@@ -1,0 +1,12 @@
+<h1 class="login-heading">Login</h1>
+<form class="login-form" (ngSubmit)="login()">
+    <section class="login-section">
+        <label for="username" class="login-label">Username:</label>
+        <input id="username" name="username" class="login-input" [(ngModel)]="username">
+    </section>
+    <section class="login-section">
+        <label for="current-password" class="login-label">Password:</label>
+        <input id="current-password" name="password" type="password" autocomplete="current-password" class="login-input" [(ngModel)]="password">
+    </section>
+    <button type="submit" class="login-button">Login</button>
+</form>
