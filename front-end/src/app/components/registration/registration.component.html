@@ -1,0 +1,16 @@
+<h1 class="login-heading">Sign up</h1>
+<form class="login-form" (ngSubmit)="signup()">
+    <section class="login-section">
+        <label for="username" class="login-label">Username:</label>
+        <input id="username" name="username" class="login-input" [(ngModel)]="username">
+    </section>
+    <section class="login-section">
+        <label for="new-password" class="login-label">Password:</label>
+        <input id="new-password" name="password" type="password" autocomplete="new-password" class="login-input" [(ngModel)]="newPassword">
+    </section>
+    <button type="submit" class="login-button">Sign up</button>
+</form>
+<h3>
+    <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">Login</a>
+</h3>
+

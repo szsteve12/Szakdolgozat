@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './landing-page.component.css'
 })
 export class LandingPageComponent {
-
+  title: string = "Tobbszemelyes poker jatek"
 }

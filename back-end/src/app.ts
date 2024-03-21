@@ -3,6 +3,7 @@ import passport from 'passport'
 import { MongoClient } from "mongodb";
 import {registerRouter} from "./modules/register/register.controller"
 import { authRouter } from './modules/auth/auth.controller';
+import cors from 'cors';
 const session = require('express-session')
 
 const uri = "mongodb+srv://szucsanyisteve456:Ssteve12@cluster0.ur8neot.mongodb.net/";
@@ -22,6 +23,14 @@ app.use(session({
 
 app.use(passport.initialize()) 
 app.use(passport.session());
+
+app.use(
+  cors({
+    origin: 'http://localhost:4200', // Allow requests from this origin
+    methods: ['GET', 'POST'], // Allow only specified HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allow only specified headers
+  })
+);
 
 app.listen(port, () => {
 	console.log(`Application is running on port ${port}.`);

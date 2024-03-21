@@ -1,4 +1,4 @@
-/* Styles for the login form container */
+
 .login-form {
     max-width: 400px;
     margin: 0 auto;
@@ -8,24 +8,20 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the form heading */
 .login-heading {
     text-align: center;
     color: #333;
 }
 
-/* Style for form sections */
 .login-section {
     margin-bottom: 15px;
 }
 
-/* Style for form labels */
 .login-label {
     display: block;
     font-weight: bold;
 }
 
-/* Style for form inputs */
 .login-input {
     width: 80%;
     padding: 10px;
@@ -34,7 +30,6 @@
     border: 1px solid #ccc;
 }
 
-/* Style for the submit button */
 .login-button {
     width: 100%;
     padding: 10px;
@@ -46,7 +41,10 @@
     cursor: pointer;
 }
 
-/* Change button color on hover */
 .login-button:hover {
     background-color: #0056b3;
+}
+
+h3 {
+    text-align: center;
 }

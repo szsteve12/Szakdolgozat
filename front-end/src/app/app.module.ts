@@ -7,13 +7,17 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { PlayerCardComponent } from './components/player-card/player-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    RegistrationComponent,
+    PlayerCardComponent
   ],
   imports: [
     CommonModule,
