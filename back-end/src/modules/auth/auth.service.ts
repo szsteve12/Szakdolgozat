@@ -1,12 +1,12 @@
 import { BSON, WithId } from 'mongodb';
 import { getClient } from '../../app';
 import passport from 'passport';
-var crypto = require('crypto');
-var LocalStrategy = require('passport-local');
 
 
 export async function authUser(userName: string, password: string, done: Function) {
     const client = getClient();
+
+    console.log("Request login:", userName + " " + password);
 
     const db = client.db('szakdoga');
     const users = db.collection('users');
@@ -40,5 +40,5 @@ passport.deserializeUser(async (id: any, done: Function) => {
 
         const user = await users.findOne({ _id: nid });
   
-        done (null, user);;
+        done (null, user);
 }) 

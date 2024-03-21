@@ -1,11 +1,11 @@
 import express from 'express';
-import * as gameCallsService from './game_calls.service';
+import * as loginService from './login.service';
 
-const gameCallsRouter = express.Router();
+const loginRouter = express.Router();
 
-export { gameCallsRouter };
+export { loginRouter };
 
-/*gameCallsRouter.get('/call', async (req, res, next) => {
+loginRouter.get('/login', async (req, res, next) => {
     try {
         console.log("Request login:", req.body);
         res.render('login');
@@ -13,4 +13,4 @@ export { gameCallsRouter };
         console.error('Error in route handler:', error);
         res.status(500).send();
     }
-})*/
+})

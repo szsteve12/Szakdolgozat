@@ -15,7 +15,8 @@ export class LoginComponent {
 	) {}
 
 login() {
-  this.auth.login(this.username, this.password).then();
+  console.log("Kuldom")
+  this.auth.login(this.username, this.password).subscribe();
 }
 
 }

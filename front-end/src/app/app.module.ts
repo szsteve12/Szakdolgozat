@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
     AppRoutingModule,
     FormsModule,
     BrowserModule,
+    HttpClientModule
   ],
   bootstrap: [AppComponent]
 })

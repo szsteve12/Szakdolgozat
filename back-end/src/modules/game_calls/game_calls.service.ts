@@ -1,4 +1,4 @@
-import { getClient } from "../../app.js";
+import { getClient } from '../../app';
 
 export function createDeck() {
     const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades'];

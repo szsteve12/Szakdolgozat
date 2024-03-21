@@ -16,7 +16,9 @@ export class AuthService {
   
 
   login(username: string, password: string): Observable<any> {
-    return this.http.post(`${this.beURL}/login/password`, { username, password });
+    console.log("Itt vagyok")
+    const URL = `${this.beURL}/login/password`
+    return this.http.post(URL, { username, password });
   }
 
 }
