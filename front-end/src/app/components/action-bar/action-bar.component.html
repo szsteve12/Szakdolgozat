@@ -1,0 +1,11 @@
+<div id="poker-action-bar">
+    <button mat-raised-button (click)="call()">Call</button>
+    <button mat-raised-button (click)="raise()">Raise</button>
+    <button mat-raised-button color="warn" (click)="fold()">Fold</button>
+    <section *ngIf="showSlider" class="example-section">
+        <label class="example-margin">Raise amount:</label>
+        <mat-slider min="0" [max]="currentUserChipNumber" class="example-margin">
+          <input type="range" matSliderThumb>
+        </mat-slider>
+    </section>
+</div>

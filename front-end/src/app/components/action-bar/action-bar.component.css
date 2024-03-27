@@ -1,0 +1,27 @@
+/* Style for the container */
+#poker-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0; /* Adjust the background color as needed */
+    padding: 10px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Style for the buttons */
+#poker-action-bar button {
+    margin-right: 10px;
+}
+
+/* Style for the slider */
+#poker-action-bar .example-section {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px; /* Adjust spacing between buttons and slider */
+}
+
+/* Style for the progress label */
+#poker-action-bar .example-margin {
+    margin-right: 10px;
+}

@@ -1,5 +1,15 @@
 <h1>{{title}}</h1>
 
 <div class="landing-page">
-    <app-player-card></app-player-card>
+    <div class="currentUser">
+        <app-player-card ></app-player-card>
+    </div>
+
+    <div class="otherUser" *ngIf="otherUser!= undefined">
+        <app-player-card [user] = "otherUser"></app-player-card>
+    </div>
+
+    <div class="actionBar">
+        <app-action-bar></app-action-bar>
+    </div>
 </div>

@@ -9,6 +9,10 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { HttpClientModule } from '@angular/common/http';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { PlayerCardComponent } from './components/player-card/player-card.component';
+import { ActionBarComponent } from './components/action-bar/action-bar.component';
+import {MatButtonModule} from '@angular/material/button';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatSliderModule} from '@angular/material/slider';
 
 
 @NgModule({
@@ -17,15 +21,21 @@ import { PlayerCardComponent } from './components/player-card/player-card.compon
     LoginComponent,
     LandingPageComponent,
     RegistrationComponent,
-    PlayerCardComponent
+    PlayerCardComponent,
+    ActionBarComponent
   ],
   imports: [
     CommonModule,
     AppRoutingModule,
     FormsModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+    MatSliderModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [
+    provideAnimationsAsync()
+  ]
 })
 export class AppModule { }
